@@ -1,0 +1,4 @@
+C:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build/CMakeFiles/midicomp.dir
+C:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build/CMakeFiles/INSTALL.dir
+C:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build/CMakeFiles/ZERO_CHECK.dir

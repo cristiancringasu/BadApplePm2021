@@ -1,0 +1,10 @@
+^C:\USERS\CRISTALCLAR\ONEDRIVE\DOCUMENTS\ARDUINO\PM\PROJECT_FINAL\STEPPER_MUSIC\MIDICOMP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp -BC:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build --check-stamp-file C:/Users/CristalClar/OneDrive/Documents/Arduino/pm/project_final/stepper_music/midicomp/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

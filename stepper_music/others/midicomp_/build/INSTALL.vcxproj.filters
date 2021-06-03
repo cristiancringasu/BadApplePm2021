@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\CristalClar\OneDrive\Documents\Arduino\pm\project_final\stepper_music\midicomp\build\CMakeFiles\3017cc86905f7c6c9c5818d7507d3986\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9B2B7124-D84A-3E11-9E3E-EDD9293BF658}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
