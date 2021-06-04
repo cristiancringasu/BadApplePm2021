@@ -1,4 +1,4 @@
-#include "led_player.h"
+#include "led_player_fast.h"
 #include <SD.h>
 #include <SPI.h>
 #include <string.h>
@@ -40,13 +40,20 @@ void play_video_file() {
   if (!strstr(entry.name(), ".VID")) {
     lcd.clear();
     lcd.print("File isnt playable!");
+    flick_led(1000);
     return;
   }
+  lcd.setCursor(3, 1);
+  lcd.print("NOW PLAYING!");
+  
   entry = SD.open(entry.name());
   Serial.write(entry.name());
   VideoFile* vfile = init_vfile(entry);
   //Serial.println("Video read...");
   play_video(vfile);
+  lcd.setCursor(0, 0);
+  lcd.clear();
+  lcd.print(entry.name());
 }
 
 void select_file() {
@@ -119,6 +126,17 @@ void check_analog_input() {
     select_file();
 }
 
+void flick_led(long timeT) {
+  long startT = millis();
+  while(millis() - startT < timeT) {
+  digitalWrite(pinLed, HIGH);
+  delay(100);
+  digitalWrite(pinLed, LOW);
+  delay(100);
+  }
+  digitalWrite(pinLed, HIGH);
+}
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -143,9 +161,10 @@ void setup() {
     //Serial.println("  Card insertion,");
     //Serial.println("  SD shield I/O pins and chip select,");
     //Serial.println("  Card formatting.");
-    digitalWrite(pinLed, HIGH);
+    flick_led(10000);
     return;
   }
+  digitalWrite(pinLed, HIGH);
 
 //  entry = SD.open("badapple.vid");
 //  VideoFile* vfile = init_vfile(entry);
